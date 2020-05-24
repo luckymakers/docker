@@ -1,5 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    
+    agent { 
+        dockerfile true,
+        label 'master'
+    }
+     
     stages {
         stage('Test') {
             steps {
